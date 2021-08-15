@@ -12,7 +12,8 @@ for filename in os.listdir(tar_path):
 	fp=Image.open(img_loc)
 	print(fp)
 	new_filename=filename.replace('.jpg','.png')
-	fp.save(path+ new_filename,'png')
+	new_filepath=os.path.join(path,new_filename)
+	fp.save(new_filepath,'png')
 
 
 
